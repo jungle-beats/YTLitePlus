@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - instant-complete-retry-build
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
