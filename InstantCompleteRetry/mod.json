@@ -1,0 +1,19 @@
+{
+  "geode": "5.9.0",
+  "version": "v1.0.0",
+  "gd": {
+    "win": "2.2081"
+  },
+  "id": "local.instant_complete_retry",
+  "name": "Instant Complete Retry",
+  "developer": "Local",
+  "description": "Skips the level-complete screen and immediately retries after a legitimate completion.",
+  "settings": {
+    "instant-retry-after-complete": {
+      "type": "bool",
+      "name": "Instant Retry After Complete",
+      "description": "When enabled, a completed level is saved normally, then immediately restarted without showing the Level Complete screen.",
+      "default": true
+    }
+  }
+}
