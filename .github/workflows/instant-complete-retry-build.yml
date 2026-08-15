@@ -1,0 +1,27 @@
+name: Build Instant Complete Retry
+
+on:
+  push:
+    branches:
+      - instant-complete-retry-build
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Geode mod
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: "v5.9.0"
+          target: "Win64"
+          path: "InstantCompleteRetry"
+
+      - name: Upload .geode package
+        uses: actions/upload-artifact@v4
+        with:
+          name: InstantCompleteRetry-Windows
+          path: ${{ steps.build.outputs.build-output }}
