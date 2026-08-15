@@ -2,6 +2,7 @@
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/EndLevelLayer.hpp>
 #include <Geode/utils/async.hpp>
+#include <arc/time/Sleep.hpp>
 
 #include <algorithm>
 #include <cmath>
