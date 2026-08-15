@@ -1,19 +1,36 @@
 {
   "geode": "5.9.0",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "gd": {
     "win": "2.2081"
   },
   "id": "local.instant_complete_retry",
   "name": "Instant Complete Retry",
   "developer": "Local",
-  "description": "Skips the level-complete screen and immediately retries after a legitimate completion.",
+  "description": "Skips the level-complete screen and automatically retries after a customizable delay.",
   "settings": {
     "instant-retry-after-complete": {
       "type": "bool",
       "name": "Instant Retry After Complete",
-      "description": "When enabled, a completed level is saved normally, then immediately restarted without showing the Level Complete screen.",
+      "description": "When enabled, a completed level is saved normally, the Level Complete screen is hidden, and the level automatically restarts.",
       "default": true
+    },
+    "restart-delay-seconds": {
+      "type": "float",
+      "name": "Restart Delay (seconds)",
+      "description": "How long to wait after beating the level before automatically restarting it.",
+      "default": 1.0,
+      "min": 0.0,
+      "max": 30.0,
+      "control": {
+        "arrows": true,
+        "arrow-step": 0.1,
+        "big-arrows": true,
+        "big-arrow-step": 1.0,
+        "slider": true,
+        "slider-step": 0.1,
+        "input": true
+      }
     }
   }
 }
